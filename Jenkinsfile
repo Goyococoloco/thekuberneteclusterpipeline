@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Create kubernetes cluster') {
             steps {
-                withAWS(region:'us-west-2', credentials:'blueocean') {
+                withAWS(region:'us-west-2', credentials:'ekszugang') {
                     sh '''
                         eksctl create cluster \
                         --name ekscluster \
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Create config file cluster') {
             steps{
-                withAWS(region:'us-west-2', credentials:'blueocean') {
+                withAWS(region:'us-west-2', credentials:'ekszugang') {
                     sh '''
                         aws eks --region us-west-2 update-kubeconfig --name ekscluster
                     '''
