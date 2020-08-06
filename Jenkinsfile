@@ -10,7 +10,7 @@ pipeline {
                         --version 1.17 \
                         --region us-west-2 \
                         --nodegroup-name eksnodes \
-                        --node-type t2.micro \
+                        --node-type t2.small \
                         --nodes 2 \
                         --nodes-min 1 \
                         --nodes-max 3 \
